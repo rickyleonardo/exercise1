@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Kalkulator</title>
+  </head>
+<body>
+<form name="Kalkulator">
+<table>
+  <tr>
+    <td colspan="16"><input type="text" style="width:142px" name="Layar" /></td>
+    <td><button type="button" onclick="Kalkulator.Layar.value = ''"> <a href="javascript:void(0)"></a></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="1" onclick="Kalkulator.Layar.value += '1'" /></td>
+    <td><input type="button" value="2" onclick="Kalkulator.Layar.value += '2'" /></td>
+    <td><input type="button" value="3" onclick="Kalkulator.Layar.value += '3'" /></td>
+    <td><input type="button" value="4" onclick="Kalkulator.Layar.value += '4'"/></td>
+    <td><input type="button" value="5" onclick="Kalkulator.Layar.value += '5'" /></td>
+    <td><input type="button" value="6" onclick="Kalkulator.Layar.value += '6'" /></td>
+    <td><input type="button" value="7" onclick="Kalkulator.Layar.value += '7'" /></td>
+    <td><input type="button" value="8" onclick="Kalkulator.Layar.value += '8'" /></td>
+    <td><input type="button" value="9" onclick="Kalkulator.Layar.value += '9'" /></td>
+    <td><input type="button" value="0" onclick="Kalkulator.Layar.value += '0'" /></td>
+    <td><input type="button" value="-" onclick="Kalkulator.Layar.value += '-'" /></td>
+    <td><input type="button" value="+" onclick="Kalkulator.Layar.value += '+'" /></td>
+    <td><input type="button" value="*" onclick="Kalkulator.Layar.value += '*'" /></td>
+    <td><input type="button" value="/" onclick="Kalkulator.Layar.value += '/'" /></td>
+    <td><input type="button" value="." onclick="Kalkulator.Layar.value += '.'" /></td>
+    <td><input type="button" value="=" onclick="Kalkulator.Layar.value = Math.round( eval(Kalkulator.Layar.value) )" /></td>
+</tr>
+</button>
+</table>
+</body>
+</html>
