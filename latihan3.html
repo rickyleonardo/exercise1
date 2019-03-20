@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Pencarian Data Otomatis  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+ 
+#myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+ 
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+ 
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+ 
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+ 
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<script type="text/javascript" src="a.js"></script>
+<body>
+ 
+<h2>Pencarian Data Otomatis dengan JavaScript</h2>
+ 
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="MENCARI NAMA" title="Type in a name">
+ 
+<table id="myTable">
+  <tr class="header">
+    <th style="width:50%;">NAME</th>
+    <th style="width:50%;">ROTATION_PERIOD</th>
+    <th style="width:50%;">ORBITAL_PERIOD</th>
+    <th style="width:50%;">DIAMETER</th>
+  <tr>
+    <td>ALDERAAN</td>
+    <td>24</td>
+    <td>364</td>
+    <td>12500</td>
+  </tr>
+  <tr>
+    <td>YAVIN</td>
+    <td>24</td>
+    <td>3818</td>
+    <td>10200</td>
+  </tr>
+  <tr>
+    <td>HOTH</td>
+    <td>23</td>
+    <td>549</td>
+    <td>7200</td>
+  </tr>
+  <tr>
+    <td>DAGOBAH</td>
+    <td>23</td>
+    <td>341</td>
+    <td>8900</td>
+  </tr>
+  <tr>
+    <td>BESPIN</td>
+    <td>12</td>
+    <td>5110</td>
+    <td>118000</td>
+  </tr>
+  <tr>
+    <td>ENDOR</td>
+    <td>18</td>
+    <td>402</td>
+    <td>4900</td>
+  </tr>
+  <tr>
+    <td>NABOO</td>
+    <td>26</td>
+    <td>312</td>
+    <td>12120</td>
+  </tr>
+  <tr>
+    <td>CORUSCANT</td>
+    <td>24</td>
+    <td>368</td>
+    <td>122240</td>
+  </tr>
+  <tr>
+    <td>KAMINO</td>
+    <td>27</td>
+    <td>463</td>
+    <td>19720</td>
+  </tr>
+  <tr>
+    <td>GEONOSIS</td>
+    <td>30</td>
+    <td>256</td>
+    <td>11370</td>
+  </tr>
+</table>
+ 
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+ 
+</body>
+</html>
